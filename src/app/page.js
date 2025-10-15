@@ -4,6 +4,7 @@ import { Header } from "../../widgets/header";
 import { About } from "../../widgets/about";
 import { Footer } from "../../widgets/footer";
 import { MainScreen } from "../../widgets/main-screen";
+import { Fact } from "../../widgets/fact";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Header/>
       <MainScreen />
       <About />
+      <Fact />
       <Footer />
     </div>
     

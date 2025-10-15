@@ -10,7 +10,7 @@ const links=[
 
 export const Header = ()=>{
     return(
-        <div className="flex bg-[#4d86ff] w-screen rounded-full items-center justify-between px-9 py-5">
+        <div className="flex bg-[#4d86ff] rounded-full items-center justify-between px-9 py-5">
             <Logo />
             <nav className="flex items-center gap-14">
                 {links.map((item, i)=>{
