@@ -1,9 +1,10 @@
 
 
-export const Button = ({children}) => {
+export const Button = ({children, func}) => {
     return(
-        <div className="bg-[#4d86ff] w-fit py-2.5 px-11 rounded-full transition ease-in-out duration-750 hover:bg-[#8874ff]">
-            <a href="#">
+        <div className="bg-[#4d86ff] w-fit py-2.5 px-11 rounded-full transition ease-in-out duration-750 hover:bg-[#8874ff]"
+        onClick={func}>
+            <a>
                 <span className="text-white font-[Montserrat] font-semibold text-sm">{children}</span>
             </a>
         </div>
@@ -28,3 +29,4 @@ export const Logo = () =>{
 </svg>
     )
 }
+
