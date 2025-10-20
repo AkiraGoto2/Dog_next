@@ -1,10 +1,34 @@
-import Image from "next/image"
-import PicImage from "../public/Card_dog(1).png"
+'use client'
+import Image from "next/image";
+import placeholder from "../public/loading.jpg";
+import { useState, useEffect } from "react";
 
 export const Card=()=>{
+    const [imageSrc, setImageSrc] = useState(placeholder);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(()=>{
+        const fetchImage = async () =>{
+            try{
+                const response = await fetch
+                (`https://dog.ceo/api/breed/spitz-indian/images/random`);
+                const data = await response.json();
+                setImageSrc(data.message);
+            } catch (error) {
+                console.error('Error', error);
+            } finally{
+                setLoading(false);
+            }
+        };
+
+        fetchImage();
+    }, []);
+
     return(
-        <div>
-            <Image src={PicImage} alt="1"/>
+        <div className=" w-[263px] h-[189px]">
+            <Image className="rounded-[50px]" 
+            src={imageSrc} height={189} width={263} alt="Sobaka"/>
+
         </div>
     )
 }
