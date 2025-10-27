@@ -6,6 +6,7 @@ import { Footer } from "../../widgets/footer";
 import { MainScreen } from "../../widgets/main-screen";
 import { Fact } from "../../widgets/fact";
 import { Porodid } from "../../widgets/porodid";
+import { Pora } from "../../widgets/pora";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <About />
       <Fact />
       <Porodid/>
+      <Pora />
       <Footer />
     </div>
     

@@ -12,7 +12,7 @@ export const Button = ({children, func}) => {
 }
 
 export const Title = ({children}) => {
-    return <h2 className="text-[#4d86ff] font-[Inter] text-4x2 font-black ">{children}</h2>
+    return <h2 className="text-[#4d86ff] font-[Inter] text-[40px] text-4x2 font-black ">{children}</h2>
 }
 
 export const Link = ({children, link})=>{
